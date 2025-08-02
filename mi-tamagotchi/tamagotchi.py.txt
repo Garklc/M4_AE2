@@ -1,0 +1,45 @@
+# tamagotchi.py
+
+class Tamagotchi:
+    def __init__(self, nombre, color):
+        """
+        Constructor de la clase Tamagotchi.
+        
+        Parámetros:
+        - nombre: str (nombre del Tamagotchi)
+        - color: str (color del Tamagotchi)
+        
+        Atributos por defecto:
+        - salud: int (inicializado en 100)
+        - felicidad: int (inicializado en 50)
+        - energia: int (inicializado en 80)
+        """
+        self.nombre = nombre
+        self.color = color
+        self.salud = 100
+        self.felicidad = 50
+        self.energia = 80
+
+    def jugar(self):
+        """
+        Incrementa la felicidad en 10 y disminuye la salud en 5.
+        """
+        self.felicidad += 10
+        self.salud -= 5
+        print(f"{self.nombre} está jugando. ¡Se siente más feliz!")
+
+    def comer(self):
+        """
+        Incrementa la felicidad en 5 y aumenta la salud en 10.
+        """
+        self.felicidad += 5
+        self.salud += 10
+        print(f"{self.nombre} está comiendo. ¡Se siente más satisfecho!")
+
+    def curar(self):
+        """
+        Incrementa la salud en 20 y disminuye la felicidad en 5.
+        """
+        self.salud += 20
+        self.felicidad -= 5
+        print(f"{self.nombre} está siendo curado. ¡Se siente más saludable!")

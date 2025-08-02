@@ -1,0 +1,38 @@
+# persona.py
+
+from tamagotchi import Tamagotchi
+
+class Persona:
+    def __init__(self, nombre, apellido, tamagotchi):
+        """
+        Constructor de la clase Persona.
+        
+        Parámetros:
+        - nombre: str (nombre de la persona)
+        - apellido: str (apellido de la persona)
+        - tamagotchi: Tamagotchi (objeto Tamagotchi asociado a la persona)
+        """
+        self.nombre = nombre
+        self.apellido = apellido
+        self.tamagotchi = tamagotchi
+
+    def jugar_con_tamagotchi(self):
+        """
+        La persona juega con su Tamagotchi, invocando el método jugar() del Tamagotchi.
+        """
+        print(f"{self.nombre} {self.apellido} está jugando con {self.tamagotchi.nombre}.")
+        self.tamagotchi.jugar()
+
+    def darle_comida(self):
+        """
+        La persona da comida a su Tamagotchi, invocando el método comer() del Tamagotchi.
+        """
+        print(f"{self.nombre} {self.apellido} está alimentando a {self.tamagotchi.nombre}.")
+        self.tamagotchi.comer()
+
+    def curarlo(self):
+        """
+        La persona cura a su Tamagotchi, invocando el método curar() del Tamagotchi.
+        """
+        print(f"{self.nombre} {self.apellido} está curando a {self.tamagotchi.nombre}.")
+        self.tamagotchi.curar()
